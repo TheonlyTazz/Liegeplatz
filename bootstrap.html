@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Liegeplatzdaten</title>
+    <style>
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 30px;
+            height: auto;
+        }
+        .form-control[readonly] {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card w-75">
+            <div class="card-header">
+                <img src="logo.png" alt="Logo" class="logo">
+                <h1 class="h5 mb-0">Liegeplatzdaten</h1>
+                <div>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">_</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">□</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">X</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="designation">Bezeichnung:</label>
+                                <input type="text" class="form-control" id="designation" name="designation" value="A34-1" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="length">Länge (m):</label>
+                                <input type="text" class="form-control" id="length" name="length">
+                            </div>
+                            <div class="form-group">
+                                <label for="width">Breite (m):</label>
+                                <input type="text" class="form-control" id="width" name="width">
+                            </div>
+                            <div class="form-group">
+                                <label for="depth">Wassertiefe (cm):</label>
+                                <input type="text" class="form-control" id="depth" name="depth">
+                            </div>
+                            <div class="form-group">
+                                <label for="status">Status:</label>
+                                <select class="form-control" id="status" name="status">
+                                    <option value="verfügbar">verfügbar</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <label>Bild:</label>
+                        <img src="grafik.jpg" alt="Liegeplatz" class="img-fluid">
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="button" class="btn btn-primary">Daten speichern</button>
+                    <button type="button" class="btn btn-secondary">Neues Bild</button>
+                    <button type="button" class="btn btn-danger">Dialog schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
